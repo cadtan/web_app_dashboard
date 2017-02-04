@@ -38,7 +38,7 @@ header {
 	background-color: #39ACD2;
 }
 
-.flex-cont {
+.flex {
 	display: flex;
 	justify-content: space-between;
 }
@@ -64,6 +64,55 @@ header {
 	margin-right: 10px;
 }
 
+.notify-number {
+	background: #FFFFFF;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	line-height: 15px; /* vertically center text*/
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+	display: none;
+	margin-right: 10px;
+	font-size: 0.8em;
+	color: #03b5d3;
+}
+
+#notification-list {
+	font-size: 0.8em;
+	position: absolute;
+	color: #00daf5;
+	background-color: #c1f3f9;
+	display: none;
+	display: block;
+	width: 100%;
+}
+/* Toggle class */
+#notification-list.show {
+	display: block; 
+}
+
+.notify-list {
+	border-bottom: 1px solid #8db3b9;
+	font-size: 0.9em;
+	color: #036E7F;
+	padding: 15px;
+	font-weight: bold;
+}
+
+.notify-time {
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 22px;
+	font-weight: normal;
+}
+
+.close-button {
+	padding-right: 10px;
+	font-weight: bold;
+}
+
 .user-photo {
 	border-radius: 50%;
 	vertical-align: middle;
@@ -76,7 +125,6 @@ header {
 	padding-left: 10px;
 	border-left: 1px solid #fff;
 }
-
 
 
 /* ------------ NAVIGATION ------------ */
@@ -100,7 +148,7 @@ a {
 
 .dashboard-header h1 {
 	font-size: 1em;
-	padding-left: 1em;
+	padding: 0 1em;
 	background-color: #fff;
 	align-self: center;
 }
@@ -144,13 +192,53 @@ a {
 /* ------------ IMAGES ------------ */
 
 img {
-	width: 8%;
+	width: 10%;
 }
 
 svg {
 	width: 120px;
 }
 
+/* ------------ CHARTS ------------ */
+
+
+
+.panel-traffic .chart-container {
+    height: 180px;
+}
+
+#traffic-chart {
+	padding-bottom: 40px;
+}
+
+.traffic-labels {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+
+
+.panel-traffic .traffic-labels button {
+	font-size: 0.8em;
+	padding: 5px 15px;
+	color: #7d7979;
+	background-color: #fff;
+	width: auto;
+}
+
+.panel-traffic button:hover {
+	color: #fff;
+	background-color: #02ACDD;
+	padding: 5px 15px;
+}
+
+.panel-traffic .traffic-labels .selected {
+	color: #fff;
+	background-color: #02ACDD;
+	font-weight:600;
+	padding: 5px 15px;
+}
 
 /* ------------ SOCIAL PANEL ------------ */
 
@@ -273,6 +361,7 @@ svg {
 
 .user-message {
 	border-bottom: 1px solid #C0DAE3;
+	padding-bottom: 20px;
 }
 
 .user-message input,
@@ -284,7 +373,12 @@ select {
 	border-radius: 8px;
 	border: 2px solid #fff;
 	outline: 0;
+	width: 100%;
 	transition: all 0.4s;
+}
+
+.user-message input {
+	width: 88%;
 }
 
 .user-settings span {
@@ -295,7 +389,7 @@ select {
 .message:focus,
 select:focus {
 	background-color: #B0E9F9;
-	border: 2px solid #A0D5E4;
+	border: 2px solid #05b2cc;
 }
 
 button {
@@ -304,12 +398,30 @@ button {
 	padding: 8px;
 	border: 0;
 	color: #fff;
+	width: 100%;
 }
 
 button:hover {
 	background-color: #039BB3;
 }
 
+.form-errors {
+	font-weight: bold;
+	color: #0194fd;
+	margin-bottom: 20px;
+	display: none;
+}
+
+.form-success {
+	background-color: #0274A9;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 5px;
+	display: none;
+}
 
 .save-button,
 .cancel-button {
@@ -415,7 +527,7 @@ input:checked + .slider .on {
 		display: flex;
 	}
 	
-	.main-nav.flex-cont {
+	.main-nav.flex {
 		flex-direction: column;
 		justify-content: initial;
 		padding: 40px 30px;
@@ -424,6 +536,11 @@ input:checked + .slider .on {
 	.notification {
 		width: 5%;
 		vertical-align: middle;
+	}
+
+	#notification-list {
+		width: 30%;
+		right: 0; /*float don't wk with absolute position */
 	}
 
 	.user-photo {
@@ -440,6 +557,10 @@ input:checked + .slider .on {
 		width: 100%;
 	}
 
+	.traffic-labels {
+		justify-content: flex-end;
+	}
+
 	.dashboard-header {
 		width: 100%;
 	}
@@ -454,10 +575,15 @@ input:checked + .slider .on {
 		width: 50%;
 	}
 
-	.panel-social {
+	.panel-social,
+	.panel-statistic {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+
+	.panel-statistic {
+		padding: 0;
 	}
 
 	.twitter-stats, 
@@ -507,6 +633,27 @@ input:checked + .slider .on {
 	select {
 		width: 100%;
 	}
+
+	.user-message input {
+		width: 89%;
+	}
+
+	.canvas-container {
+		position: relative;
+		width: 100%;
+		height: 85%;
+		/*border: 1px solid black;*/
+	}
+
+	.daily-traffic {
+		border-right: 1px solid #C0DAE3;
+	}
+
+	.daily-traffic,
+	.mobile-users {
+		padding: 20px;
+		width: 50%;
+	}
 }
 
 @media (min-width: 769px) {
@@ -520,11 +667,17 @@ input:checked + .slider .on {
 
 @media (min-width: 1024px) {
 
-	.main-nav.flex-cont {
+	.main-nav.flex {
 		padding: 40px;
 	}
 	.search-box {
 		width: 80%;
 	}
+
+	.user-message input {
+		width: 92%;
+	}
+
+
 
 }
