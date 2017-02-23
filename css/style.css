@@ -370,9 +370,8 @@ select {
 	background-color: #CDF6FC;
 	padding: 10px 15px;
 	border-radius: 8px;
-	border: 2px solid #fff;
-	outline: 0;
 	border:1px solid #CDF6FC;
+	outline: 0;
 	transition: all 0.4s;
 }
 

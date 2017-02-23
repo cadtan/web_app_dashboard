@@ -3,10 +3,8 @@
   Variables
 =============================================================== */
 
-var alertButton = document.querySelector(".alert-btn");
 var sendButton = document.querySelector(".send-button");
 var notificationButton = document.querySelector(".notification");
-var alertElement = document.querySelector(".alert");
 var notifyNumber = document.querySelector(".notify-number");
 var newMemberDiv = document.querySelector(".new-member");
 var recentActivity = document.querySelector(".recent-activity");
@@ -16,7 +14,7 @@ var trafficDailyButton = document.getElementById("traffic-daily");
 var trafficWeeklyButton = document.getElementById("traffic-weekly");
 var trafficMonthlyButton = document.getElementById("traffic-monthly");
 
-var notificationList = document.getElementById("notification-list")
+var notificationList = document.getElementById("notification-list");
 var ctxTraffic = document.getElementById("traffic-chart").getContext("2d");
 var ctxDaily = document.getElementById("daily-chart").getContext("2d");
 var ctxMobile = document.getElementById("mobile-chart").getContext("2d");
@@ -33,7 +31,7 @@ var notifications = [
   ["Marcos Moralez sent you a message", "6 minutes ago"],
   ["Tomas Lauriv commented on Facebook's changes for 2017", "2 hours ago"],
   ["Matt Smitt like the post Facebook's changes for 2017", "1 day ago"]
-]
+];
 
 var totalNotifications = notifications.length;
 
@@ -48,7 +46,7 @@ if (notifications.length !== 0) {
 
 function updateNum( num ) {
   totalNotifications = num;
-  if ( totalNotifications == 0 ) {
+  if ( totalNotifications === 0 ) {
    notifyNumber.style.display = "none";  
   } else {
     notifyNumber.innerHTML = totalNotifications;
@@ -82,7 +80,7 @@ function bindEvent( listItem ) {
     this.parentNode.style.display = "none";
     totalNotifications -= 1;
     updateNum( totalNotifications );
-  }   
+  };   
 }
 
 // Cycle over notification ul list items
@@ -192,16 +190,16 @@ function updateData ( data ) {
 // Traffic widget buttons
 trafficHourlyButton.onclick = function() {
   updateData(hourlyData);
-}
+};
 trafficDailyButton.onclick = function() {
   updateData(dailyData);
-}
+};
 trafficWeeklyButton.onclick = function() {
   updateData(weeklyData);
-}
+};
 trafficMonthlyButton.onclick = function() {
   updateData(monthlyData);
-}
+};
 
 // Draw Traffic Chart
 var trafficChart = new Chart(ctxTraffic, {
@@ -303,14 +301,14 @@ var newMembers = [
     date: "02/17/17",
     photo: "mathew-smith.png"  
   }
-]
+];
 
 // Build new member list
 function newMemberList( member ) {
   // Create new div for each member
   var newDiv = document.createElement("div");
   // Add class to div
-  newDiv.className = "member flex"
+  newDiv.className = "member flex";
 
   // Build each member list
   var html = "";
@@ -319,7 +317,7 @@ function newMemberList( member ) {
   html += "<div class='member-info'>";
   html += "<p class='member-name'>" + member.firstName + ' ' +  member.lastName + "</p>";
   html += "<a class='member-email' href='" + member.email + "'>" + member.email + "</a>";
-  html += "</div>"
+  html += "</div>";
   html += "<span class='date'>" + member.date + "</span>";
   // print html
   newDiv.innerHTML = html;
@@ -360,14 +358,14 @@ var activities = [
     time: "1 day ago",
     photo: "nicklaus-jarvis.jpg" 
   }
-]
+];
 
 // Show recent activity
 function recentActivities( activity ) {
   // Create new div for each activity
   var newDiv = document.createElement("div");
   // Add class to div
-  newDiv.className = "member flex"
+  newDiv.className = "member flex";
 
   // Build each activity list
   var html = "";
@@ -376,7 +374,7 @@ function recentActivities( activity ) {
   html += "<div class='member-activity'>";
   html += "<p class='member-comments'>" + activity.comment + "</p>";
   html += "<p class='time'>" + activity.time + "</p>";
-  html += "</div>"
+  html += "</div>";
   html += "<img class='arrow' src='icons/arrow-forward-icon.png' alt='arrow icon'>";
   // print html
   newDiv.innerHTML = html;
@@ -403,15 +401,15 @@ function validateForm( event ) {
    successMsg.innerHTML = "Message successfully sent!!";
 
     for( var i=0; i<messageform.elements.length; i++ ) {
-      if (messageform[i].value == "") {
+      if (messageform[i].value === "") {
         errorMsg.style.display = "block";    
         messageform[i].focus();
         status = false;
-        return false
+        return false;
       }
     }
 
-    if ( status = true ) {
+    if ( status === true ) {
       // Prevent page refresh
       event.preventDefault();
       errorMsg.style.display = "none";
@@ -433,7 +431,6 @@ sendButton.onclick = validateForm;
 ( function timeZone() {
 
   var timezoneSelect = document.getElementById( "time-zone" );
-  var selectOption = timezoneSelect.options[ timezoneSelect.selectedIndex ];
   // Retrieve data from local storage
   var lastSelected = localStorage.getItem( 'timezoneSelect' );
 
@@ -443,12 +440,12 @@ sendButton.onclick = validateForm;
   }
 
   // When selected option changes,
-  timezoneSelect.onchange =  function () {
+  timezoneSelect.onchange = function () {
     // update new selected option
     lastSelected = timezoneSelect.options[ timezoneSelect.selectedIndex ].value;
     // Store new data 
     localStorage.setItem('timezoneSelect', lastSelected);
-  }
+  };
 
 })();
 
@@ -471,7 +468,7 @@ if ( lastProfileData !== null ) {
 
 // Save settings in local storage
 function storeData ( checkbox, name ) {
-    if ( checkbox.checked == true ) {
+    if ( checkbox.checked === true ) {
       localStorage.setItem( name, checkbox.value);
     } else {
       localStorage.removeItem( name );
@@ -480,10 +477,10 @@ function storeData ( checkbox, name ) {
 
 emailCheckbox.onclick = function () {
   storeData( emailCheckbox, "emailPreference" ); 
-}
+};
 profileCheckbox.onclick = function () {
   storeData( profileCheckbox, "profilePreference" ); 
-}
+};
 
 
 
