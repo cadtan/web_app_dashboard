@@ -338,25 +338,29 @@ var activities = [
   {
     comment: "Matt Litherla commented on YourApp's SEO Tips",
     time: "4 hours ago",
-    photo: "matt-litherland.jpg"  
+    photo: "matt-litherland.jpg",
+    icon: "icon-thumbup.svg"
   },
 
   {
    comment: "Zack Onisko like the post Facebook's Changes for 2016",
    time: "5 hours ago",
-   photo: "zack-onisko.jpeg" 
+   photo: "zack-onisko.jpeg",
+   icon: "icon-message.svg"
   },
 
   {
    comment: "Marcos Moralez commented on Facebook's Changes for 2016",
    time: "6 hours ago",
-   photo: "marcos-moralez.jpg" 
+   photo: "marcos-moralez.jpg",
+   icon: "icon-write.svg"
   },
 
   {
     comment: "Nicklaus Jarvis posted YourApp's SEO Tips",
     time: "1 day ago",
-    photo: "nicklaus-jarvis.jpg" 
+    photo: "nicklaus-jarvis.jpg",
+    icon: "icon-thumbup.svg"
   }
 ];
 
@@ -369,10 +373,17 @@ function recentActivities( activity ) {
 
   // Build each activity list
   var html = "";
-  html += "<img src='images/" + activity.photo + "' alt='";
+  html += "<img src='images/" + activity.photo + "'alt='";
   html += activity.firstName + ' ' +  activity.lastName + "''>";
   html += "<div class='member-activity'>";
   html += "<p class='member-comments'>" + activity.comment + "</p>";
+
+  html += "<div class='svg-container'>";
+  html += "<img src='icons/" + activity.icon + "'alt='";
+  html += activity.icon + "''>";
+  html += "</div>";
+
+
   html += "<p class='time'>" + activity.time + "</p>";
   html += "</div>";
   html += "<img class='arrow' src='icons/arrow-forward-icon.png' alt='arrow icon'>";
