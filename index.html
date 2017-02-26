@@ -17,7 +17,7 @@
 		<div class="header-nav">
 			<img class="notification" src="icons/icon-bell.svg" alt="Bell icon"><span class="notify-number"></span>
 			<img class="user-photo" src="images/user.png" alt="User photo">
-			<div class="user-name">Caden Tan</span>
+			<div class="user-name">Caden Tan</div>
 		</div>
 	</header>
 
@@ -53,7 +53,7 @@
 						</div>
 						<canvas id="traffic-chart"></canvas>
 					</div>
-			</div>
+			</div><!-- end panel-traffic -->
 		
 			<div class="panel-statistic">
 				<div class="daily-traffic ">
@@ -61,15 +61,14 @@
 					<div class="canvas-container">
 						<canvas id="daily-chart"></canvas>
 					</div>
-				</div>
-				
+				</div>		
 				<div class="mobile-users">
 					<h2>Mobile Users</h2>
 					<div class="canvas-container">
 						<canvas id="mobile-chart"></canvas>
 					</div>
 				</div>		
-			</div>
+			</div><!-- end panel-statistic -->
 		
 			<div class="panel-social">
 				<h2>SOCIAL STATS</h2>
@@ -132,25 +131,25 @@
 				<!-- Instagram logo -->
 				<div class="instagram-stats">
 					<div class="social-cir">
-						<svg version="1.1" id="_x31_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" opacity: 1;" xml:space="preserve">
+						<svg version="1.1" id="_x31_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
 							<g>
 								<path class="st0" d="M405.43,0H106.57C47.774,0,0,47.817,0,106.57V405.43C0,464.183,47.774,512,106.57,512H405.43
-									C464.183,512,512,464.183,512,405.43V106.57C512,47.817,464.183,0,405.43,0z M255.676,119.45h-23.168V50.969h23.168v68.222V119.45z
-									 M304.898,178.543c1.43,0.808,2.863,1.602,4.246,2.473c0.922,0.586,1.801,1.234,2.703,1.847c1.281,0.867,2.574,1.715,3.808,2.641
-									c0.57,0.426,1.106,0.898,1.664,1.336c15.91,12.461,27.973,29.613,33.993,49.422c2.824,9.172,4.308,18.902,4.308,29.004
-									c0,55.047-44.621,99.621-99.621,99.621c-55.043,0-99.617-44.574-99.617-99.621c0-10.102,1.48-19.832,4.308-29.004
-									c12.418-40.867,50.367-70.617,95.309-70.617c16.762,0,32.554,4.156,46.422,11.476C303.266,177.566,304.07,178.074,304.898,178.543z
-									 M426.652,145.91c0,6.301-5.098,11.394-11.398,11.394h-48.281c-6.254,0-11.352-5.094-11.352-11.394V97.629
-									c0-6.305,5.098-11.398,11.352-11.398h48.281c6.301,0,11.398,5.094,11.398,11.398V145.91z M183.442,119.45h-23.168V50.969h23.168
-									V119.45z M111.203,119.45H88.039V54.164c5.789-2.082,12.046-3.195,18.531-3.195h4.633V119.45z M50.969,236.262h58.984l12.462,0.031
-									c-2.035,9.352-3.102,19.024-3.102,28.973c0,75.386,61.301,136.687,136.687,136.687c75.344,0,136.687-61.301,136.687-136.687
-									c0-9.242-1.007-18.218-2.77-26.949c-0.125-0.684-0.175-1.375-0.308-2.055h71.422V405.43c0,30.582-25.019,55.602-55.602,55.602
-									H106.57c-30.578,0-55.602-25.019-55.602-55.602V236.262z"></path>
+								C464.183,512,512,464.183,512,405.43V106.57C512,47.817,464.183,0,405.43,0z M255.676,119.45h-23.168V50.969h23.168v68.222V119.45z
+								 M304.898,178.543c1.43,0.808,2.863,1.602,4.246,2.473c0.922,0.586,1.801,1.234,2.703,1.847c1.281,0.867,2.574,1.715,3.808,2.641
+								c0.57,0.426,1.106,0.898,1.664,1.336c15.91,12.461,27.973,29.613,33.993,49.422c2.824,9.172,4.308,18.902,4.308,29.004
+								c0,55.047-44.621,99.621-99.621,99.621c-55.043,0-99.617-44.574-99.617-99.621c0-10.102,1.48-19.832,4.308-29.004
+								c12.418-40.867,50.367-70.617,95.309-70.617c16.762,0,32.554,4.156,46.422,11.476C303.266,177.566,304.07,178.074,304.898,178.543z
+								 M426.652,145.91c0,6.301-5.098,11.394-11.398,11.394h-48.281c-6.254,0-11.352-5.094-11.352-11.394V97.629
+								c0-6.305,5.098-11.398,11.352-11.398h48.281c6.301,0,11.398,5.094,11.398,11.398V145.91z M183.442,119.45h-23.168V50.969h23.168
+								V119.45z M111.203,119.45H88.039V54.164c5.789-2.082,12.046-3.195,18.531-3.195h4.633V119.45z M50.969,236.262h58.984l12.462,0.031
+								c-2.035,9.352-3.102,19.024-3.102,28.973c0,75.386,61.301,136.687,136.687,136.687c75.344,0,136.687-61.301,136.687-136.687
+								c0-9.242-1.007-18.218-2.77-26.949c-0.125-0.684-0.175-1.375-0.308-2.055h71.422V405.43c0,30.582-25.019,55.602-55.602,55.602
+								H106.57c-30.578,0-55.602-25.019-55.602-55.602V236.262z"></path>
 								<path class="st0" d="M194.098,236.262c-4.121,8.805-6.442,18.625-6.442,29.004c0,37.718,30.582,68.301,68.344,68.301
-									c37.718,0,68.297-30.582,68.297-68.301c0-10.379-2.313-20.199-6.438-29.004c-10.938-23.214-34.519-39.293-61.859-39.293
-									C228.617,196.969,205.031,213.047,194.098,236.262z M291.078,227.457c2.5,2.688,4.355,5.699,5.652,8.805
-									c3.66,9.082,2.176,19.137-4.586,25.39c-9.082,8.387-24.328,6.672-34.012-3.843c-5.789-6.305-8.293-14.321-7.414-21.547
-									c0.602-4.82,2.688-9.266,6.348-12.648C266.149,215.226,281.348,216.942,291.078,227.457z"></path>
+								c37.718,0,68.297-30.582,68.297-68.301c0-10.379-2.313-20.199-6.438-29.004c-10.938-23.214-34.519-39.293-61.859-39.293
+								C228.617,196.969,205.031,213.047,194.098,236.262z M291.078,227.457c2.5,2.688,4.355,5.699,5.652,8.805
+								c3.66,9.082,2.176,19.137-4.586,25.39c-9.082,8.387-24.328,6.672-34.012-3.843c-5.789-6.305-8.293-14.321-7.414-21.547
+								c0.602-4.82,2.688-9.266,6.348-12.648C266.149,215.226,281.348,216.942,291.078,227.457z"></path>
 							</g>
 						</svg>
 					</div>
@@ -162,7 +161,7 @@
 			<!-- Linkedin logo -->
 			<div class="linkedin-stats">
 				<div class="social-cir">
-						<svg class="linkedin-svg" enable-background:new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<svg class="linkedin-svg" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<g id="XMLID_184_"><path d="M130.5,289h53.8v173h-53.8V289z M157.5,203c17.2,0,31.2,14,31.2,31.2s-14,31.2-31.2,31.2   c-17.3,0-31.2-14-31.2-31.2S140.2,203,157.5,203" id="XMLID_195_"/>
 							<path d="M218.1,289h51.5v23.7h0.7c7.2-13.6,24.7-27.9,50.9-27.9c54.4,0,64.5,35.8,64.5,82.4V462H332v-84.1   c0-20.1-0.3-45.9-27.9-45.9c-28,0-32.2,21.9-32.2,44.4V462h-53.7L218.1,289L218.1,289z" id="XMLID_192_"/></g>
 					</svg>
@@ -191,18 +190,15 @@
 				<div class="new-member">
 					<h2>NEW MEMBERS</h2>					
 				</div>
-
 				<div class="recent-activity">
 					<h2>RECENT ACTIVITY</h2>			
 				</div>
-			</div>
+			</div><!-- end panel-member -->
 	
-			<div class="panel-user">
-			
+			<div class="panel-user">			
 					<div class="user-message">
 						<h2>MESSAGE USER</h2>		
-							<div class="form-errors"></div>
-							
+							<div class="form-errors"></div>							
 							<div class="form-success"></div>
 						
 							<form action="index.html" id="message-form" name="message-form" method="post">
@@ -221,76 +217,72 @@
 								<textarea name="message-user" placeholder="Message for User" class="message"></textarea>
 								<button class="send-button" type="submit" value="submit">SEND</button>	
 							</form>
-					</div>
+					</div><!-- End of user-message -->	
 				
 					<div class="user-settings">
 						<h2>SETTINGS</h2>
 
 						<form action="index.html" id="Settings" method="post">
 							<div class="email-setting">
-
-										<span>Send Email Notification</span>						
-											<label class="switch">
-												<input type="checkbox" name="email-switch" id="email-switch">
-												<div class="slider round">
-													<span class="on">ON</span>
-													<span class="off">OFF</span>
-												</div>
-											</label> 
-									</div>
+								<span>Send Email Notification</span>						
+								<label class="switch">
+									<input type="checkbox" name="email-switch" id="email-switch">
+									<span class="slider">
+									<span class="switch-label" data-on="ON" data-off="OFF"></span>
+									</span>
+								</label> 	
+							</div><!-- End of email-settings -->
 							
-									<div class="profile-setting">
-										<span>Send Profile to Public</span>
-										<label class="switch">
-											<input type="checkbox" name="profile-switch" id="profile-switch">
-											<div class="slider round">
-												<span class="on">ON</span>
-												<span class="off">OFF</span>
-											</div>
-										</label>
-									</div>
+							<div class="profile-setting">
+								<span>Send Profile to Public</span>
+								<label class="switch">
+									<input type="checkbox" name="profile-switch" id="profile-switch">
+									<span class="slider"></span>
+									<span class="switch-label" data-on="ON" data-off="OFF"></span>				
+								</label>
+							</div> <!-- End of profile-settings -->				
+							<!-- Select option -->	
+							<select name="timeZone" id="time-zone" class="wide">
+								<option disabled="disabled" selected="selected">Select Time Zone</option>
+									<option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+							      <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+							      <option value="-10.0">(GMT -10:00) Hawaii</option>
+							      <option value="-9.0">(GMT -9:00) Alaska</option>
+							      <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+							      <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+							      <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+							      <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+							      <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+							      <option value="-3.5">(GMT -3:30) Newfoundland</option>
+							      <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+							      <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+							      <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+							      <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+							      <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+							      <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+							      <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+							      <option value="3.5">(GMT +3:30) Tehran</option>
+							      <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+							      <option value="4.5">(GMT +4:30) Kabul</option>
+							      <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+							      <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+							      <option value="5.75">(GMT +5:45) Kathmandu</option>
+							      <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+							      <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+							      <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+							      <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+							      <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+							      <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+							      <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+							      <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>  
+								</select><!-- End of select option -->			
 								
-									<select name="timeZone" id="time-zone" class="wide">
-										<option disabled="disabled" selected="selected">Select Time Zone</option>
-										 <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
-								         <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
-								         <option value="-10.0">(GMT -10:00) Hawaii</option>
-								         <option value="-9.0">(GMT -9:00) Alaska</option>
-								         <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
-								         <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
-								         <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
-								         <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
-								         <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
-								         <option value="-3.5">(GMT -3:30) Newfoundland</option>
-								         <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
-								         <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
-								         <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
-								         <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
-								         <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
-								         <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
-								         <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
-								         <option value="3.5">(GMT +3:30) Tehran</option>
-								         <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
-								         <option value="4.5">(GMT +4:30) Kabul</option>
-								         <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
-								         <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
-								         <option value="5.75">(GMT +5:45) Kathmandu</option>
-								         <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
-								         <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
-								         <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
-								         <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
-								         <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
-								         <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
-								         <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
-								         <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>  
-									</select>
-					
-									<div class="flex">
-										<button class="save-button">Save</button>
-										<button class="cancel-button">Cancel</button>
-									</div>				
-
-						</div> <!-- End of user-settings -->				
+								<div class="flex">
+									<button class="save-button">Save</button>
+									<button class="cancel-button">Cancel</button>
+								</div><!-- End of save/cancel buttons -->					
+						</form>		
+					</div><!-- End of user-settings -->		
 			</div><!-- End of panel-user -->
 		</div><!-- End of main-container -->	
 	</div><!-- End of wrapper -->	
